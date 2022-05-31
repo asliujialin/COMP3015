@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <?php
+        if(isset($_GET['Message'])){
+        echo $_GET['Message'];
+}
+    ?>
+    <form action="./lab3_processor.php" method="post">
+        <input type="text" name="username" id="username" />
+        <label for="username">Username</label><br />
+
+        <input type="password" name="password" id="password" />
+        <label for="password">Password</label><br />
+
+        <input type="text" name="studentNumber" id="studentNumber" />
+        <label for="studentNumber">Student Number</label><br />
+
+        <p>Please select your gender:</p>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br>
+        <br>
+
+        <fieldset>
+            <legend>Which languages are you studying?</legend>
+
+            <input type="checkbox"
+                   name="languages[]"
+                   id="C++"
+                   value="C++" />
+            <label for="C++">C++</label><br />
+            <input type="checkbox" name="languages[]" id="C#" value="C#" />
+            <label for="C#">C#</label><br />
+            <input type="checkbox"
+                   name="languages[]"
+                   id="Javascript"
+                   value="Javascript" />
+            <label for="Javascript">Javascript</label><br />
+            <input type="checkbox"
+                   name="languages[]"
+                   id="Java"
+                   value="Java" />
+            <label for="Java">Java</label><br />
+            <input type="checkbox" name="languages[]" id="Perl" value="Perl" />
+            <label for="Perl">Perl</label><br />
+            <input type="checkbox"
+                   name="languages[]"
+                   id="PHP"
+                   value="PHP" />
+            <label for="PHP">PHP</label><br />
+            <input type="checkbox" name="languages[]" id="Python" value="Python" />
+            <label for="Python">Python</label><br />
+        </fieldset>
+
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
