@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .button {
+            border: none;
+            color: cornflowerblue;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        #inputText {
+            width: 30%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid red;
+            border-radius: 4px;
+        }
+    </style>
+    <title>Lab5</title>
+    <h1>Course Manager</h1>
+</head>
+<body>
+
+    <form>
+        <input type="text"
+               name="newCourse"
+               id="inputText"
+               placeholder="ex-COMP2525" />
+
+        <input type="submit" class="button" value="ADD" />
+    </form>
+
+    <ul>
+        <li>
+            <input type="checkbox" checked="checked">
+            COMP3015
+            <button type="button" class="button">DELETE</button>
+            <button type="button" class="button">UPDATE</button>
+        </li>
+
+        <li>
+            <input type="checkbox" checked="checked">
+            COMP3015
+            <button type="button" class="button">DELETE</button>
+            <button type="button" class="button">UPDATE</button>
+        </li>
+
+        <li>
+            <input type="checkbox" checked="checked">
+            COMP3015
+            <button type="button" class="button">DELETE</button>
+            <button type="button" class="button">UPDATE</button>
+        </li>
+    </ul>
+
+    
+</body>
+</html>
