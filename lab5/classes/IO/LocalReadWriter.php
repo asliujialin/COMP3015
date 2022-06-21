@@ -1,5 +1,5 @@
 <?php
-class LocalReadWriter{
+class LocalReadWriter implements IReadWritable{
 	public function getCourses(){
 		return "courses";
 	}

@@ -1,5 +1,5 @@
 <?php
-class RemoteReadWriter{
+class RemoteReadWriter implements IReadWritable{
 	public function getCourses(){
 		return "remote courses";
 	}
