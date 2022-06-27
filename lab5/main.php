@@ -6,20 +6,16 @@ include("./classes/IO/LocalReadWriter.php");
 include("./classes/IO/RemoteReadWriter.php");
 
 
+print_r($_POST);
 const MAX_FILESIZE = 2000000000;
 const FILE_TYPE = "image/png";
 
-$picture = "";
 
-if ($_FILES["background_picture"]["type"] == FILE_TYPE && $_FILES["background_picture"]["size"] <= MAX_FILESIZE){
-	$picture = "upload/" .md5(time() . $_FILES["background_picture"]["name"]);
-	move_uploaded_file($_FILES["background_picture"]["tmp_name"], $picture);
-}else {
-	echo "Invalid background picture(png only)";
-	exit;
-}
+session_start();
+$picture = $_SESSION['currentpic'];
 
-
+$courses = json_decode(file_get_contents("./data.json", true));
+print_r($courses);
 
 //$courseApp = new CourseManager("david", new LocalReadWriter());
 //echo $courseApp->getCourses();
@@ -62,7 +58,8 @@ if ($_FILES["background_picture"]["type"] == FILE_TYPE && $_FILES["background_pi
         <input type="text"
                name="newCourse"
                id="inputText"
-               placeholder="ex-COMP2525" />
+               placeholder="ex-COMP2525"
+        />
 
         <input type="submit" class="button" value="ADD" />
     </form>
@@ -90,7 +87,7 @@ if ($_FILES["background_picture"]["type"] == FILE_TYPE && $_FILES["background_pi
         </li>
     </ul>
 
-    <form enctype="multipart/form-data" action="main.php" method="post">
+    <form enctype="multipart/form-data" action="setbg.php" method="post">
         <input type="file" name="background_picture" />
 
         <input type="submit" class="button" value="Upload" />

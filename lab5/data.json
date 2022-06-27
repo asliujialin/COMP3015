@@ -1,0 +1,16 @@
+{
+  "david": [
+    {
+      "courseName": "COMP3021",
+      "completed": true
+    },
+    {
+      "courseName": "COMP3023",
+      "completed": false
+    },
+    {
+      "courseName": "COMP3022",
+      "completed": false
+    }
+  ]
+}
