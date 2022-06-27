@@ -1,7 +1,7 @@
 <?php
-interface IReadWriteable{
+interface IReadWritable{
 	public function getCourses();
-	public function addCourses(Course $course);
-	public function deleteCourses(string $id);
-	public function completeCourses(string $id);
+	public function addCourse(Course $course);
+	public function deleteCourse(string $id);
+	public function completeCourse(string $id);
 }

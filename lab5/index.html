@@ -29,7 +29,7 @@
 </head>
 <body>
 
-    <form>
+    <form action="main.php" method="post">
         <input type="text"
                name="newCourse"
                id="inputText"
@@ -61,6 +61,10 @@
         </li>
     </ul>
 
-    
+    <form enctype="multipart/form-data" action="main.php" method="post">
+        <input type="file" name="background_picture" />
+
+        <input type="submit" class="button" value="Upload" />
+    </form>
 </body>
 </html>
