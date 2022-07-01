@@ -61,28 +61,7 @@ $_SESSION['currentpic'] = $picture;
         <input type="submit" class="button" value="ADD" />
     </form>
 
-    <ul>
-        <li>
-            <input type="checkbox" checked="checked">
-            COMP3015
-            <button type="button" class="button">DELETE</button>
-            <button type="button" class="button">UPDATE</button>
-        </li>
-
-        <li>
-            <input type="checkbox" checked="checked">
-            COMP3015
-            <button type="button" class="button">DELETE</button>
-            <button type="button" class="button">UPDATE</button>
-        </li>
-
-        <li>
-            <input type="checkbox" checked="checked">
-            COMP3015
-            <button type="button" class="button">DELETE</button>
-            <button type="button" class="button">UPDATE</button>
-        </li>
-    </ul>
+    
 
     <form enctype="multipart/form-data" action="setbg.php" method="post">
         <input type="file" name="background_picture" />

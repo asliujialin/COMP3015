@@ -1,18 +1,18 @@
 <?php
 class LocalReadWriter implements IReadWritable{
 	public function getCourses(){
-		return "courses";
+		return "coursessss";
 	}
 
 	public function addCourse($course){
 		return "course added";
 	}
 
-	public function deleteCourse($id){
+	public function deleteCourse($courseName){
 		return "course deleted";
 	}
 
-	public function completeCourse($id){
+	public function completeCourse($courseName){
 		return "course completed";
 	}
 }

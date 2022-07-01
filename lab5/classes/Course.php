@@ -21,7 +21,11 @@ class Course{
 		$this->name = $name;
 	}
 
-	public function setStatus(){
-		$this->status = 0;
+	public function setStatus($status){
+		if ($status == true) {
+			$this->status = true;
+		}else {
+			$this->status = false;
+		}
 	}
 }
